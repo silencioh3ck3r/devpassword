@@ -1,4 +1,4 @@
-devpassword
+DevPassword
 ===========
 
 Créer un générateur de mot de passe robuste.
