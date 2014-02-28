@@ -7,5 +7,3 @@ Créer un générateur de mot de passe robuste.
 ## I - Récupérer le code
 
 Via Git, en clonant ce dépôt.
-
-## II - Profitez de l'application!
