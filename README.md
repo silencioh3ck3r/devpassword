@@ -1,4 +1,4 @@
 devpassword
 ===========
 
-Créer un générateur de mot de passe.
+Créer un générateur de mot de passe robuste.
