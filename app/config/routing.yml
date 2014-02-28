@@ -1,0 +1,10 @@
+dev_password:
+    resource: "@DevPasswordBundle/Resources/config/routing.yml"
+    prefix:   /
+
+# src/Sdz/BlogBundle/Resources/config/routing.yml
+
+SdzBlogBundle:
+    resource: "@SdzBlogBundle/Resources/config/routing.yml"
+    prefix:   /blog
+

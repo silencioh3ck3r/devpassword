@@ -1,0 +1,3 @@
+dev_password_homepage:
+    pattern:  /password
+    defaults: { _controller: DevPasswordBundle:Password:index }

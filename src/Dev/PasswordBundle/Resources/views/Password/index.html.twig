@@ -1,0 +1,18 @@
+{# src/Dev/PasswordBundle/Ressources/views/Password/index.html.twig #}
+
+{% extends "DevPasswordBundle::layout.html.twig" %}
+
+{% block title %}
+    {{ parent() }} - Index
+{% endblock %}
+
+{% block password %}
+    <section>
+        <form action="#" method="post">
+            <p>
+                <label>Générateur de mot de passe : <input type="text" value="{{ password }}"></label>
+                <input class="btn btn-primary" type="submit" value="Générer"/>
+            </p>
+        </form>
+    </section>
+{% endblock %}

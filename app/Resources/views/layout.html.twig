@@ -1,0 +1,110 @@
+{# app/Resources/views/layout.html.twig #}
+
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        
+        <title>{% block title %}DevPassword{% endblock %}</title>
+        
+        {% block stylesheet %}
+            <link rel="stylesheet" href="{{ asset('css/bootstrap.css') }}" type="text/css" />
+        {% endblock %}
+    </head>
+    <body>
+        <div class="container">
+            <div id="header" class="hero-unit">
+                <h1 class="text-center" >Générateur de mot de passe</h1>
+                <p class="text-center">Ce projet est propulsé par Symfony2, et construit pour le défi : « Créez votre propre générateur de mots de passe ! » du developpez.com.</p>
+            </div>
+            
+            <nav>
+                <ul class="nav nav-tabs nav-stacked">
+                    <div class="accordion" id="accordion2" data-toggle="buttons-checkbox">
+                                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">
+                                        <li><button class="btn btn-large btn-block btn-primary" type="button">Astuce</button></li>
+                                    </a>
+                                    <div id="collapseOne" class="accordion-body collapse">
+                                    
+                                    <div class="accordion-inner">
+                                        <p>Voici une liste comportant quelques petits conseils intéressants :</p>
+                                        <ul>
+                                            <li>S’assurer d’avoir un mot de passe d’une longueur d’au moins 8 caractères.</li>
+                                            <li>Illustrer ce mot de passe par une phrase comportant différents caractères.</li>
+                                            <li>Limiter vous au mot de passe simpliste tel que password, 123456, qwerty.</li>
+                                            <li>Envisager ne jamais écrire votre mot de passe sur un morceau de papier.</li>
+                                            <li>Ne jamais partager ou écrire votre mot de passe à qui ce soit peu importe.</li>
+                                            <li>Chercher à mémoriser votre mot de passe quotidiennement (une minute). </li>
+                                            <li>Innover votre façon de choisir un mot de passe. Sorter du cadre classique.</li>
+                                            <li>Occasionner à changer votre mot de passe fréquemment (1 fois par mois). </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                
+                                <div class="accordion" id="accordion2">
+                                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo">
+                                        <li><button class="btn btn-large btn-block" type="button">Gestion</button></li>
+                                    </a>
+                                    <div id="collapseTwo" class="accordion-body collapse">
+                                    
+                                    <div class="accordion-inner">
+                                        <p>Mise à jour éventuellement : </p>
+                                        <ol>
+                                            <li>Ajout d'un bouton Tester.</li>
+                                            <li>Ajout de différentes options comme la longueur, caractères en minuscule, etc.</li>
+                                            <li>Ajout d'un affichage d'un système de points permettant de mieux comprendre les calculs effectués.</li>
+                                            <li>Ajout d'un générateur de mot de passe via l'intégration d'une image.</li>
+                                        </ol>
+                                    </div>
+                                </div>
+                                
+                                <div class="accordion" id="accordion2">
+                                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseThree">
+                                        <li><button class="btn btn-large btn-block" type="button">Code source</button></li>
+                                    </a>
+                                    <div id="collapseThree" class="accordion-body collapse">
+                                    
+                                    <div class="accordion-inner">
+                                        <p><a href="#">Cliquer pour télécharger</a> le code source du générateur de mot de passe.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </ul>
+            </nav>
+                        
+            {% block body %}
+            {% endblock %}
+            
+            {# La gestion du testeur de mot de passe. #}
+            
+            
+            {% block tester %}
+                    
+            <div id="menu">
+                 {{ render(controller("DevPasswordBundle:Password:tester", {'str': password })) }}
+            </div>
+            
+            {% endblock %}
+            
+            {# Fin de la gestion du testeur de mot de passe. #}            
+            
+            <div class="alert alert-info">
+                <p><strong>Strong generator password</strong> is under construction.</p>
+            </div>
+        
+            <footer>
+                <hr>
+                <p>Copyright © 2014 Silencio - Tous droits réservés</p>
+            </footer>
+        </div>
+        
+        {% block javascripts %}
+        {# Lignes JavaScript pour utiliser les fonctionnalités du bootstrap Twitter #}
+            <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+            <script type="text/javascript" src="{{ asset('js/bootstrap.js') }}"></script>
+        {% endblock %}
+    </body>
+</html>
+        

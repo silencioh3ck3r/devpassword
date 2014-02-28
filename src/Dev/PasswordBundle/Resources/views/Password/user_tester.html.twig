@@ -1,0 +1,20 @@
+{# src/Dev/PasswordBundle/Resources/views/Password/tester.html.twig #}
+
+<section>
+    <p>        
+        <label>Tester votre mot de passe : <input type="text" value="{{ user_complexity }}"></label>
+        {% if user_complexity > 100 %}
+            <p class="btn btn-primary">Très sécurisé</p> {# bleu clair #}
+        {% elseif user_complexity > 80 %}
+            <p class="btn btn-success">Sécurisé</p> {# vert #}
+        {% elseif user_complexity > 60 %}
+            <p class="btn btn-warning">Attention</p> {# jaune #}
+        {% elseif user_complexity > 40 %}
+            <p class="btn btn-danger">Danger</p> {# rouge #}
+        {% elseif user_complexity > 20 %}
+            <p class="btn btn-inverse">Ne jamais utiliser ce mot de passe</p> {# noir #}
+        {% else %}
+            <p class="btn">Ne vaut pas le coût de l'évaluation, c'est médiocre!</p> {# default (gris) #}
+        {% endif %}
+    </p>
+</section>

@@ -1,0 +1,9 @@
+parameters:
+#    dev_password.example.class: Dev\PasswordBundle\Example
+
+services:
+    dev_password.generator:
+        class: Dev\PasswordBundle\Generator\DevGenerator
+#        arguments: [@length, "plain_value", 12]
+    dev_password.tester:
+        class: Dev\PasswordBundle\Generator\DevTester
